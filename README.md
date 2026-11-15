@@ -63,9 +63,9 @@ The following table lists leading hosted CLM and process orchestration platforms
 
 ## 🔓 Open-Source GitHub Projects
 
-The following table showcases open-source CLM platforms, contract management tools, and workflow engines, sorted descending by GitHub star count:
+The following table showcases open-source CLM platforms, contract management tools, and workflow engines, sorted descending by GitHub Stars_Count:
 
-| Project | Star Badge | Description |
+| Project | Stars_Badge | Description |
 |---------|------------|-------------|
 | **[Conductor](https://github.com/conductor-oss/conductor)** | [![Stars](https://img.shields.io/github/stars/conductor-oss/conductor?style=social&color=white)](https://github.com/conductor-oss/conductor/stargazers) | **Enterprise distributed workflow orchestration engine** originally developed by Netflix. Powers complex multi-service approvals, human-in-the-loop tasks, and asynchronous contract processing pipelines at immense scale. |
 | **[Temporal](https://github.com/temporalio/temporal)** | [![Stars](https://img.shields.io/github/stars/temporalio/temporal?style=social&color=white)](https://github.com/temporalio/temporal/stargazers) | **Durable execution code-first workflow engine** (Go, TypeScript, Python, Java). Ideal for engineering teams orchestrating mission-critical contract lifecycle state machines with zero state loss and automatic retries. |
