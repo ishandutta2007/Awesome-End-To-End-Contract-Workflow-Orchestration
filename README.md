@@ -63,7 +63,7 @@ The following table lists leading hosted CLM and process orchestration platforms
 
 ## 🔓 Open-Source GitHub Projects
 
-The following table showcases open-source CLM platforms, contract management tools, and workflow engines, sorted descending by GitHub Stars_Count:
+The following table showcases open-source CLM platforms, contract management tools, and workflow engines, sorted descending by GitHub_Stars_Count:
 
 | Project | Stars_Badge | Description |
 |---------|------------|-------------|
