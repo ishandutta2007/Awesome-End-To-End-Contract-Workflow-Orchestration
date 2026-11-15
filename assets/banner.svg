@@ -1,0 +1,224 @@
+<svg fill="none" viewBox="0 0 1200 420" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background linear gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="45%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Accent linear gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.6" />
+    </linearGradient>
+
+    <radialGradient id="radialCyan" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radialPurple" cx="15%" cy="85%" r="60%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1.5" fill="#475569" fill-opacity="0.3" />
+    </pattern>
+
+    <!-- Glowing filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="badgeShadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      fill: #94a3b8;
+    }
+    .tagline-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+    }
+    .flow-label {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .flow-sub {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      fill: #94a3b8;
+    }
+    .pill-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      fill: #cbd5e1;
+    }
+
+    /* Ambient Pulsing Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.05); }
+    }
+    @keyframes lineFlow {
+      0% { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes nodeFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .pulse-orb-1 {
+      animation: pulseGlow 6s ease-in-out infinite;
+      transform-origin: 80% 20%;
+    }
+    .pulse-orb-2 {
+      animation: pulseGlow 8s ease-in-out infinite;
+      transform-origin: 15% 85%;
+    }
+    .flowing-path {
+      stroke-dasharray: 6 6;
+      animation: lineFlow 2s linear infinite;
+    }
+    .card-float-1 { animation: nodeFloat 4s ease-in-out infinite; }
+    .card-float-2 { animation: nodeFloat 4s ease-in-out infinite 0.8s; }
+    .card-float-3 { animation: nodeFloat 4s ease-in-out infinite 1.6s; }
+    .card-float-4 { animation: nodeFloat 4s ease-in-out infinite 2.4s; }
+  </style>
+
+  <!-- Background Base Layer -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)" />
+  <rect width="1200" height="420" rx="16" fill="url(#grid)" />
+
+  <!-- Animated Ambient Light Orbs in Background -->
+  <circle class="pulse-orb-1" cx="950" cy="90" r="280" fill="url(#radialCyan)" />
+  <circle class="pulse-orb-2" cx="180" cy="340" r="320" fill="url(#radialPurple)" />
+
+  <!-- Background Connecting Flow Line -->
+  <g opacity="0.6">
+    <path class="flowing-path" d="M 180 345 L 430 345 L 680 345 L 940 345" stroke="url(#primaryGlow)" stroke-width="2.5" fill="none" />
+  </g>
+
+  <!-- FOREGROUND: Header & Titles (Stays strictly on top) -->
+  <g transform="translate(60, 48)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="310" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+    <circle cx="14" cy="14" r="5" fill="#38bdf8" />
+    <text x="28" y="18.5" class="tagline-text">Curated Ecosystem &bull; 2026</text>
+
+    <!-- Main Title -->
+    <text x="0" y="78" class="title-text">
+      Contract Workflow <tspan fill="url(#primaryGlow)">Orchestration</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="112" class="subtitle-text">
+      End-to-End Multi-Stage Approvals, Clause Routing &amp; Open-Source Engines
+    </text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="168" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="14" y="18" class="pill-text">&#x26A1; Multi-Stage Approvals</text>
+
+      <rect x="180" y="0" width="160" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="194" y="18" class="pill-text">&#x1F500; Conditional Routing</text>
+
+      <rect x="352" y="0" width="144" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="366" y="18" class="pill-text">&#x2699;&#xFE0F; BPMN 2.0 Engines</text>
+
+      <rect x="508" y="0" width="148" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="522" y="18" class="pill-text">&#x1F512; AGPL/Self-Hosted</text>
+
+      <rect x="668" y="0" width="148" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="682" y="18" class="pill-text">&#x1F916; AI Clause Review</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND: Dynamic Workflow Stages (Underneath title area, distinct spacing) -->
+  <g transform="translate(60, 290)">
+    <!-- Stage 1 -->
+    <g class="card-float-1" transform="translate(0, 0)" filter="url(#badgeShadow)">
+      <rect x="0" y="0" width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.2" />
+      <circle cx="34" cy="36" r="18" fill="#1e3a8a" />
+      <text x="34" y="41" text-anchor="middle" font-size="16" fill="#60a5fa">&#x1F4DD;</text>
+      <text x="64" y="32" class="flow-label">1. Intake &amp; Draft</text>
+      <text x="64" y="50" class="flow-sub">Smart templates &amp; AI drafting</text>
+    </g>
+
+    <!-- Arrow 1 to 2 -->
+    <path d="M 238 36 L 264 36" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 2 -->
+    <g class="card-float-2" transform="translate(275, 0)" filter="url(#badgeShadow)">
+      <rect x="0" y="0" width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.2" />
+      <circle cx="34" cy="36" r="18" fill="#4c1d95" />
+      <text x="34" y="41" text-anchor="middle" font-size="16" fill="#c084fc">&#x1F500;</text>
+      <text x="64" y="32" class="flow-label">2. Approval Routing</text>
+      <text x="64" y="50" class="flow-sub">Value &amp; clause-based rules</text>
+    </g>
+
+    <!-- Arrow 2 to 3 -->
+    <path d="M 513 36 L 539 36" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 3 -->
+    <g class="card-float-3" transform="translate(550, 0)" filter="url(#badgeShadow)">
+      <rect x="0" y="0" width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.2" />
+      <circle cx="34" cy="36" r="18" fill="#831843" />
+      <text x="34" y="41" text-anchor="middle" font-size="16" fill="#f472b6">&#x270D;&#xFE0F;</text>
+      <text x="64" y="32" class="flow-label">3. Electronic Sign</text>
+      <text x="64" y="50" class="flow-sub">Audit trail &amp; multi-party</text>
+    </g>
+
+    <!-- Arrow 3 to 4 -->
+    <path d="M 788 36 L 814 36" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 4 -->
+    <g class="card-float-4" transform="translate(825, 0)" filter="url(#badgeShadow)">
+      <rect x="0" y="0" width="245" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.2" />
+      <circle cx="34" cy="36" r="18" fill="#064e3b" />
+      <text x="34" y="41" text-anchor="middle" font-size="16" fill="#34d399">&#x1F514;</text>
+      <text x="64" y="32" class="flow-label">4. Post-Sign Tracking</text>
+      <text x="64" y="50" class="flow-sub">Milestones, renewals &amp; audit</text>
+    </g>
+  </g>
+</svg>
